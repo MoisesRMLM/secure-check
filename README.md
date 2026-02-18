@@ -44,13 +44,13 @@
   * The assets with which the map will be developed.
   * The life bar we will use will be similar to this:
 
- <img width="1536" height="1024" alt="life bar" src="https://github.com/user-attachments/assets/b5481352-1b31-4454-8a5e-6d1f62c9e982" />
+ <img width="200" height="200" alt="life bar" src="https://github.com/user-attachments/assets/b5481352-1b31-4454-8a5e-6d1f62c9e982" />
 
   * The music we will use is called 'Murasato Shota' (Murasato Shota - Spiral and Heartbeat.mp3). The music will play faster as the life bar fills up.
   * When completing a level, we will play a sound every time we make a mistake.
   * We will use a text font.
 
-    <img width="145" height="145" alt="dos_8x8_font_white" src="https://github.com/user-attachments/assets/32772ec4-9ecb-4c95-a422-06bb6f1ceb29" />
+    <img width="200" height="200" alt="dos_8x8_font_white" src="https://github.com/user-attachments/assets/32772ec4-9ecb-4c95-a422-06bb6f1ceb29" />
 
 ---
 
