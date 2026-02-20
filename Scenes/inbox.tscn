@@ -57,15 +57,18 @@ layout_mode = 2
 
 [node name="sender" type="Label" parent="VBoxContainer/Button/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1902791265]
 layout_mode = 2
-text = "Sender: "
+text = "Sender: 
+ support@mircosoft-security.com"
 
 [node name="separator" type="Label" parent="VBoxContainer/Button/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1569367345]
 layout_mode = 2
-text = "|"
+text = "|
+|"
 
 [node name="subject" type="Label" parent="VBoxContainer/Button/MarginContainer/HBoxContainer/HBoxContainer" unique_id=753144467]
 layout_mode = 2
-text = "Subject: "
+text = "Subject: 
+Action Required: Your account has been compromised"
 
 [node name="Control" type="Control" parent="VBoxContainer/Button/MarginContainer/HBoxContainer" unique_id=1378536191]
 layout_mode = 2
@@ -107,15 +110,18 @@ layout_mode = 2
 
 [node name="sender" type="Label" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer/HBoxContainer" unique_id=2100430323]
 layout_mode = 2
-text = "Sender: "
+text = "Sender: 
+support@fedex-shipping.co"
 
 [node name="separator" type="Label" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer/HBoxContainer" unique_id=2065147231]
 layout_mode = 2
-text = "|"
+text = "|
+|"
 
 [node name="subject" type="Label" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1396893446]
 layout_mode = 2
-text = "Subject: "
+text = "Subject: 
+Delivery Exception: Action Required for Package #7721-B"
 
 [node name="Control" type="Control" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer" unique_id=510363032]
 layout_mode = 2
@@ -157,15 +163,18 @@ layout_mode = 2
 
 [node name="sender" type="Label" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1574798865]
 layout_mode = 2
-text = "Sender: "
+text = "Sender: 
+support@cloudplatform.com"
 
 [node name="separator" type="Label" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1053946291]
 layout_mode = 2
-text = "|"
+text = "|
+|"
 
 [node name="subject" type="Label" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer/HBoxContainer" unique_id=912519994]
 layout_mode = 2
-text = "Subject: "
+text = "Subject: 
+Scheduled Maintenance This Weekend"
 
 [node name="Control" type="Control" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer" unique_id=403757994]
 layout_mode = 2
@@ -217,11 +226,11 @@ layout_mode = 2
 layout_mode = 2
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button/MarginContainer/HBoxContainer/accept" to="." method="_on_accept_pressed" binds= ["Button"]]
-[connection signal="pressed" from="VBoxContainer/Button/MarginContainer/HBoxContainer/decline" to="." method="_on_decline_pressed" binds= ["Button"]]
+[connection signal="pressed" from="VBoxContainer/Button/MarginContainer/HBoxContainer/accept" to="." method="_on_accept_pressed" binds= ["Button", 0]]
+[connection signal="pressed" from="VBoxContainer/Button/MarginContainer/HBoxContainer/decline" to="." method="_on_decline_pressed" binds= ["Button", 0]]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2/MarginContainer/HBoxContainer/accept" to="." method="_on_accept_pressed" binds= ["Button2"]]
-[connection signal="pressed" from="VBoxContainer/Button2/MarginContainer/HBoxContainer/decline" to="." method="_on_decline_pressed" binds= ["Button2"]]
+[connection signal="pressed" from="VBoxContainer/Button2/MarginContainer/HBoxContainer/accept" to="." method="_on_accept_pressed" binds= ["Button2", 1]]
+[connection signal="pressed" from="VBoxContainer/Button2/MarginContainer/HBoxContainer/decline" to="." method="_on_decline_pressed" binds= ["Button2", 1]]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3/MarginContainer/HBoxContainer/accept" to="." method="_on_accept_pressed" binds= ["Button3"]]
-[connection signal="pressed" from="VBoxContainer/Button3/MarginContainer/HBoxContainer/decline" to="." method="_on_decline_pressed" binds= ["Button3"]]
+[connection signal="pressed" from="VBoxContainer/Button3/MarginContainer/HBoxContainer/accept" to="." method="_on_accept_pressed" binds= ["Button3", 2]]
+[connection signal="pressed" from="VBoxContainer/Button3/MarginContainer/HBoxContainer/decline" to="." method="_on_decline_pressed" binds= ["Button3", 2]]

@@ -22,10 +22,31 @@ func _on_button_3_pressed():
 
 # --- UNIFIED FUNCTIONS FOR ACCEPT/DECLINE ---
 
-func _on_accept_pressed(node_name: String):
+func _on_accept_pressed(node_name: String, index: int):
+	var data = email_list[index]
+	
+	if data.is_phishing:
+		# Error: Accepted a phishing email
+		GameManager.lose_life()
+		print("Mistake")
+	else:
+		# Correct: Accepted a legitimate email
+		print("Correct")
+	
 	_remove_from_inbox(node_name)
 
-func _on_decline_pressed(node_name: String):
+
+func _on_decline_pressed(node_name: String, index: int):
+	var data = email_list[index]
+	
+	if data.is_phishing:
+		# Correct: Identified and blocked phishing
+		print("Correct")
+	else:
+		# Error: Declined a legitimate email
+		GameManager.lose_life()
+		print("Mistake")
+	
 	_remove_from_inbox(node_name)
 
 # --- LOGIC FUNCTIONS ---
