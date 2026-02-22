@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EmailData" format=3 uid="uid://cscc7poclnnje"]
+
+[ext_resource type="Script" uid="uid://cgiajeiqd5ja8" path="res://Scripts/emailData.gd" id="1_iehwd"]
+
+[resource]
+script = ExtResource("1_iehwd")
+sender = "support@fedex-shipping.co"
+subject = "Delivery Exception: Action Required for Package #7721-B"
+body = "Dear Customer,
+
+We attempted to deliver your package today at 2:15 PM, but no one was available to sign for the delivery.
+
+To avoid the package being returned to the sender, please visit our website to reschedule your delivery or select a pickup location.
+
+https://www.fedex.com/en-us/delivery-manager.html"
+is_phishing = true
+metadata/_custom_type_script = "uid://cgiajeiqd5ja8"
