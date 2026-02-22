@@ -11,6 +11,20 @@
 [ext_resource type="StyleBox" uid="uid://be4xmedchw1c2" path="res://Styles/HoverGreenButton.tres" id="8_2w40r"]
 [ext_resource type="StyleBox" uid="uid://7vh3wd7ded63" path="res://Styles/HoverRedButton.tres" id="9_mj77x"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2w40r"]
+bg_color = Color(0, 0.5882353, 0.65882355, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_am5dt"]
+bg_color = Color(0.4519357, 0.9233471, 0.9999998, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="inbox" type="Control" unique_id=1149034931]
 layout_mode = 3
 anchors_preset = 15
@@ -30,6 +44,44 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.65834, 0.65834, 0.6583398, 1)
 
+[node name="Header" type="ColorRect" parent="." unique_id=581643691]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 71.0
+grow_horizontal = 2
+color = Color(0.35595164, 0.7083737, 0.7891075, 1)
+
+[node name="Label" type="Label" parent="Header" unique_id=480523886]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = -34.5
+offset_right = 230.0
+offset_bottom = 34.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "EMAIL"
+
+[node name="help" type="Button" parent="Header" unique_id=1986007471]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.95800006
+anchor_top = 0.5
+anchor_right = 0.95800006
+anchor_bottom = 0.5
+offset_left = -38.61609
+offset_top = -15.5
+offset_right = 38.38391
+offset_bottom = 18.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_2w40r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_am5dt")
+text = "HELP"
+
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1421404183]
 layout_mode = 1
 anchors_preset = 8
@@ -38,7 +90,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -567.5
-offset_top = -284.0
+offset_top = -246.0
 offset_right = 567.5
 offset_bottom = 281.49
 grow_horizontal = 2
@@ -65,39 +117,35 @@ layout_mode = 2
 texture = ExtResource("1_ctpb2")
 expand_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Button/MarginContainer/HBoxContainer" unique_id=87686758]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Button/MarginContainer/HBoxContainer" unique_id=2064314147]
 layout_mode = 2
+size_flags_vertical = 4
 
-[node name="sender" type="Label" parent="VBoxContainer/Button/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1902791265]
+[node name="sender" type="Label" parent="VBoxContainer/Button/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1902791265]
 layout_mode = 2
-text = "Sender: 
- support@mircosoft-security.com"
+text = "Sender:   support@mircosoft-security.com"
 
-[node name="separator" type="Label" parent="VBoxContainer/Button/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1569367345]
+[node name="subject" type="Label" parent="VBoxContainer/Button/MarginContainer/HBoxContainer/VBoxContainer" unique_id=753144467]
 layout_mode = 2
-text = "|
-|"
-
-[node name="subject" type="Label" parent="VBoxContainer/Button/MarginContainer/HBoxContainer/HBoxContainer" unique_id=753144467]
-layout_mode = 2
-text = "Subject: 
-Action Required: Your account has been compromised"
+text = "Subject:   Action Required: Your account has been compromised"
 
 [node name="Control" type="Control" parent="VBoxContainer/Button/MarginContainer/HBoxContainer" unique_id=1378536191]
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="accept" type="Button" parent="VBoxContainer/Button/MarginContainer/HBoxContainer" unique_id=1235758199]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(100, 60)
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_styles/normal = ExtResource("7_7dd3p")
 theme_override_styles/pressed = ExtResource("7_7dd3p")
 theme_override_styles/hover = ExtResource("8_2w40r")
 text = "Accept"
 
 [node name="decline" type="Button" parent="VBoxContainer/Button/MarginContainer/HBoxContainer" unique_id=2057374395]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(100, 60)
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_styles/normal = ExtResource("7_tkc3k")
 theme_override_styles/pressed = ExtResource("7_tkc3k")
 theme_override_styles/hover = ExtResource("9_mj77x")
@@ -124,39 +172,35 @@ layout_mode = 2
 texture = ExtResource("1_ctpb2")
 expand_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer" unique_id=105494141]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer" unique_id=1974357556]
 layout_mode = 2
+size_flags_vertical = 4
 
-[node name="sender" type="Label" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer/HBoxContainer" unique_id=2100430323]
+[node name="sender" type="Label" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer/VBoxContainer" unique_id=2100430323]
 layout_mode = 2
-text = "Sender: 
-support@fedex-shipping.co"
+text = "Sender:   support@fedex-shipping.co"
 
-[node name="separator" type="Label" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer/HBoxContainer" unique_id=2065147231]
+[node name="subject" type="Label" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1396893446]
 layout_mode = 2
-text = "|
-|"
-
-[node name="subject" type="Label" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1396893446]
-layout_mode = 2
-text = "Subject: 
-Delivery Exception: Action Required for Package #7721-B"
+text = "Subject:   Delivery Exception: Action Required for Package #7721-B"
 
 [node name="Control" type="Control" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer" unique_id=510363032]
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="accept" type="Button" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer" unique_id=225124231]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(100, 60)
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_styles/normal = ExtResource("7_7dd3p")
 theme_override_styles/pressed = ExtResource("7_7dd3p")
 theme_override_styles/hover = ExtResource("8_2w40r")
 text = "Accept"
 
 [node name="decline" type="Button" parent="VBoxContainer/Button2/MarginContainer/HBoxContainer" unique_id=337773956]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(100, 60)
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_styles/normal = ExtResource("7_tkc3k")
 theme_override_styles/pressed = ExtResource("7_tkc3k")
 theme_override_styles/hover = ExtResource("9_mj77x")
@@ -183,44 +227,117 @@ layout_mode = 2
 texture = ExtResource("1_ctpb2")
 expand_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer" unique_id=1698598110]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer" unique_id=1186959457]
 layout_mode = 2
+size_flags_vertical = 4
 
-[node name="sender" type="Label" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1574798865]
+[node name="sender" type="Label" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1574798865]
 layout_mode = 2
-text = "Sender: 
-support@cloudplatform.com"
+text = "Sender:   support@cloudplatform.com"
 
-[node name="separator" type="Label" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1053946291]
+[node name="subject" type="Label" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer/VBoxContainer" unique_id=912519994]
 layout_mode = 2
-text = "|
-|"
-
-[node name="subject" type="Label" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer/HBoxContainer" unique_id=912519994]
-layout_mode = 2
-text = "Subject: 
-Scheduled Maintenance This Weekend"
+text = "Subject:   Scheduled Maintenance This Weekend"
 
 [node name="Control" type="Control" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer" unique_id=403757994]
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="accept" type="Button" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer" unique_id=1322662899]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(100, 60)
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_styles/normal = ExtResource("7_7dd3p")
 theme_override_styles/pressed = ExtResource("7_7dd3p")
 theme_override_styles/hover = ExtResource("8_2w40r")
 text = "Accept"
 
 [node name="decline" type="Button" parent="VBoxContainer/Button3/MarginContainer/HBoxContainer" unique_id=1885264255]
-custom_minimum_size = Vector2(100, 0)
+custom_minimum_size = Vector2(100, 60)
 layout_mode = 2
+size_flags_vertical = 4
 theme_override_styles/normal = ExtResource("7_tkc3k")
 theme_override_styles/pressed = ExtResource("7_tkc3k")
 theme_override_styles/hover = ExtResource("9_mj77x")
 text = "Decline"
 
+[node name="HelpPanel" type="Panel" parent="." unique_id=439541464]
+visible = false
+top_level = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="HelpPanel" unique_id=558168798]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.680294, 0.8160705, 0.96505386, 1)
+
+[node name="Label" type="Label" parent="HelpPanel" unique_id=1250488873]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -195.0
+offset_top = 26.0
+offset_right = 195.0
+offset_bottom = 95.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "PHISHING GUIDE"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HelpPanel" unique_id=1847164336]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -489.25
+offset_top = -204.25
+offset_right = 489.25
+offset_bottom = 294.25
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[b]What is Phishing?[/b]
+Phishing is a type of cyber attack where scammers pretend to be a trusted company to steal your data.
+
+[b]How to identify it:[/b]
+
+• [b]Check the Sender:[/b] Look for strange email addresses or misspellings.
+• [b]Urgency:[/b] They often use threats like \"Your account will be deleted\" to make you panic.
+• [b]Links & Buttons:[/b] Be careful with buttons that ask for passwords or personal info.
+• [b]Too good to be true:[/b] Beware of \"Free Prizes\" or \"Unclaimed Money\"."
+
+[node name="closeHelp" type="Button" parent="HelpPanel" unique_id=1637903964]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.93000007
+anchor_top = 0.085
+anchor_right = 0.93000007
+anchor_bottom = 0.085
+offset_left = -58.360107
+offset_top = -27.080002
+offset_right = 57.639893
+offset_bottom = 26.919998
+grow_horizontal = 0
+theme_override_styles/normal = ExtResource("7_tkc3k")
+theme_override_styles/hover = ExtResource("9_mj77x")
+text = "BACK"
+
+[connection signal="pressed" from="Header/help" to="." method="_on_help_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button/MarginContainer/HBoxContainer/accept" to="." method="_on_accept_pressed" binds= ["Button", 0]]
 [connection signal="pressed" from="VBoxContainer/Button/MarginContainer/HBoxContainer/decline" to="." method="_on_decline_pressed" binds= ["Button", 0]]
@@ -230,3 +347,4 @@ text = "Decline"
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3/MarginContainer/HBoxContainer/accept" to="." method="_on_accept_pressed" binds= ["Button3", 2]]
 [connection signal="pressed" from="VBoxContainer/Button3/MarginContainer/HBoxContainer/decline" to="." method="_on_decline_pressed" binds= ["Button3", 2]]
+[connection signal="pressed" from="HelpPanel/closeHelp" to="." method="_on_close_help_pressed"]

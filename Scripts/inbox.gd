@@ -63,3 +63,14 @@ func _remove_from_inbox(node_name: String):
 	# We search for the node dynamically by its name
 	if has_node("VBoxContainer/" + node_name):
 		get_node("VBoxContainer/" + node_name).queue_free()
+
+
+# --- HELP PANEL BUTTONS ---
+
+# Help button
+func _on_help_pressed():
+	$HelpPanel.show()
+
+# Close button on help panel
+func _on_close_help_pressed():
+	$HelpPanel.hide()
