@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://by0nm8si5lc66"]
+
+[ext_resource type="Script" uid="uid://dxavdc3ir577s" path="res://Scripts/email.gd" id="1_up85j"]
+[ext_resource type="StyleBox" uid="uid://c04hsr682c0gd" path="res://Styles/RedButton.tres" id="2_hkori"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hkori"]
+bg_color = Color(0.9998947, 0.29612827, 0.27115482, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_umtb6"]
+bg_color = Color(0.9999055, 0.3204559, 0.2907285, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="email" type="Control" unique_id=969625037]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_up85j")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1309838101]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.74714255, 0.9987202, 0.9999997, 0.23529412)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2119204873]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=860214909]
+layout_mode = 2
+
+[node name="back" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1804918235]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("2_hkori")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hkori")
+theme_override_styles/hover = SubResource("StyleBoxFlat_umtb6")
+text = "Back"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=965737556]
+layout_mode = 2
+
+[node name="sender" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer2" unique_id=986719290]
+layout_mode = 2
+text = "Sender :"
+
+[node name="subject" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer2" unique_id=1500877613]
+layout_mode = 2
+text = "Subject :"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=172095543]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=326793686]
+layout_mode = 2
+size_flags_vertical = 3
+text = "body
+
+
+"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/back" to="." method="_on_back_pressed"]
