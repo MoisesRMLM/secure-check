@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EmailData" format=3 uid="uid://ctkxoitp4usos"]
+
+[ext_resource type="Script" uid="uid://cgiajeiqd5ja8" path="res://Scripts/emailData.gd" id="1_avutp"]
+
+[resource]
+script = ExtResource("1_avutp")
+sender = "claims@lottery-winner-awards.net"
+subject = "CONGRATULATIONS! You have won $1,000,000!"
+body = "You are the lucky winner of our annual global giveaway! To claim your cash prize, please click 'Accept' and fill out the form at http://www.bank-verify-secure-login.co/claim-prize with your bank account details and your ID number.
+
+This offer expires in 2 hours. Do not share this email with anyone."
+is_phishing = true
+metadata/_custom_type_script = "uid://cgiajeiqd5ja8"
