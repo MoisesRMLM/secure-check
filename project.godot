@@ -13,7 +13,14 @@ config_version=5
 config/name="secure check"
 run/main_scene="uid://igrnln2h4mxv"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*uid://c3qo1wvo6mdv3"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [physics]
 

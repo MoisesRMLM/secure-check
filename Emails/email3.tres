@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EmailData" format=3 uid="uid://dwbh18qf7ovw5"]
+
+[ext_resource type="Script" uid="uid://cgiajeiqd5ja8" path="res://Scripts/emailData.gd" id="1_qay57"]
+
+[resource]
+script = ExtResource("1_qay57")
+sender = "support@cloudplatform.com"
+subject = "Scheduled Maintenance This Weekend"
+body = "Hello,
+
+Our services will undergo scheduled maintenance on Saturday from 1:00 AM to 5:00 AM.
+
+You can check system status anytime at:
+https://cloudplatform.com/status
+
+Thank you for your understanding.
+Support Team"
+metadata/_custom_type_script = "uid://cgiajeiqd5ja8"

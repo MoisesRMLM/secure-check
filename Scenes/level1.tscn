@@ -1,17 +1,17 @@
-[gd_scene format=3 uid="uid://igrnln2h4mxv"]
+[gd_scene load_steps=2 format=3 uid="uid://igrnln2h4mxv"]
 
 [ext_resource type="PackedScene" uid="uid://b7fevov0drb48" path="res://Scenes/password_container.tscn" id="1_4hvuo"]
 
-[node name="Node2D" type="Node2D" unique_id=1225934325]
+[node name="Node2D" type="Node2D"]
 top_level = true
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1992750684]
+[node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1152.0
 offset_bottom = 647.0
 metadata/_edit_lock_ = true
 
-[node name="PasswordContainer" parent="." unique_id=1826576929 instance=ExtResource("1_4hvuo")]
+[node name="PasswordContainer" parent="." instance=ExtResource("1_4hvuo")]
 position = Vector2(106, 107)
 
-[node name="PasswordContainer2" parent="." unique_id=230493589 instance=ExtResource("1_4hvuo")]
+[node name="PasswordContainer2" parent="." instance=ExtResource("1_4hvuo")]
 position = Vector2(107, 201)

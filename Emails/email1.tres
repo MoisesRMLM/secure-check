@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EmailData" format=3 uid="uid://bxofofk77uumh"]
+
+[ext_resource type="Script" uid="uid://cgiajeiqd5ja8" path="res://Scripts/emailData.gd" id="1_4n1oh"]
+
+[resource]
+script = ExtResource("1_4n1oh")
+sender = "support@mircosoft-security.com"
+subject = "Action Required: Your account has been compromised"
+body = "Dear User,
+
+Our systems detected an unauthorized login attempt from an unrecognized IP address. To protect your data, we have temporarily restricted your account.
+
+Please click the link below to verify your identity and restore access immediately:
+http://secure-login-mircosoft.net/verify-identity
+
+Failure to do so within 24 hours will lead to permanent account suspension."
+is_phishing = true
+metadata/_custom_type_script = "uid://cgiajeiqd5ja8"
