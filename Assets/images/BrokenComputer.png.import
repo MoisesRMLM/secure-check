@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chkslx382j8id"
-path="res://.godot/imported/ordenador_roto-removebg-preview.png-f028bf8758f1beda4e92e62b6490664c.ctex"
+path="res://.godot/imported/BrokenComputer.png-9ac3784f02de930ee3d4c13b8359b96a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/images/ordenador_roto-removebg-preview.png"
-dest_files=["res://.godot/imported/ordenador_roto-removebg-preview.png-f028bf8758f1beda4e92e62b6490664c.ctex"]
+source_file="res://Assets/images/BrokenComputer.png"
+dest_files=["res://.godot/imported/BrokenComputer.png-9ac3784f02de930ee3d4c13b8359b96a.ctex"]
 
 [params]
 

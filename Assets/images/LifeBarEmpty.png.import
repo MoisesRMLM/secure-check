@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdd1tilicixm4"
-path="res://.godot/imported/hacker-removebg-preview.png-1a0f44538278bf9970e6a7b366a629bf.ctex"
+uid="uid://c5wc6u1d2vej5"
+path="res://.godot/imported/LifeBarEmpty.png-b9dd35ac3b7c7bc6c1571eacbef1be9e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/images/hacker-removebg-preview.png"
-dest_files=["res://.godot/imported/hacker-removebg-preview.png-1a0f44538278bf9970e6a7b366a629bf.ctex"]
+source_file="res://Assets/images/LifeBarEmpty.png"
+dest_files=["res://.godot/imported/LifeBarEmpty.png-b9dd35ac3b7c7bc6c1571eacbef1be9e.ctex"]
 
 [params]
 
