@@ -20,6 +20,12 @@ func _on_button_2_pressed():
 func _on_button_3_pressed():
 	_go_to_email(2, "Button3")
 
+func _on_button_4_pressed():
+	_go_to_email(3, "Button4")
+
+func _on_button_5_pressed():
+	_go_to_email(4, "Button5")
+
 # --- UNIFIED FUNCTIONS FOR ACCEPT/DECLINE ---
 
 func _on_accept_pressed(node_name: String, index: int):

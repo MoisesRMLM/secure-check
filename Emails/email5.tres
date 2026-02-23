@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="EmailData" format=3 uid="uid://b2gfhf25mlgfl"]
+
+[ext_resource type="Script" uid="uid://cgiajeiqd5ja8" path="res://Scripts/emailData.gd" id="1_inc3i"]
+
+[resource]
+script = ExtResource("1_inc3i")
+sender = "order-update@amazon.com"
+subject = "Your Amazon.com order #114-928374-1234567 confirmation"
+body = "Hello,
+
+Thank you for shopping with us. We’ll send a confirmation when your items ship.
+
+Order Details:
+• Item: Mechanical Gaming Keyboard
+• Delivery: Wednesday, Oct 25
+• Total: $54.99
+
+You can track your order or make changes in 'Your Orders' on the official Amazon website. If you did not place this order, please visit our secure Help Center at https://www.amazon.com
+
+We hope to see you again soon!"
+metadata/_custom_type_script = "uid://cgiajeiqd5ja8"
