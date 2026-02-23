@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5wc6u1d2vej5"
-path="res://.godot/imported/New Piskel (3).png-3882552c719ee0f46dbaf4ea540864d3.ctex"
+uid="uid://cdd1tilicixm4"
+path="res://.godot/imported/Hacker.png-4c01bcc250c5f494d058495bf70d72c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/images/New Piskel (3).png"
-dest_files=["res://.godot/imported/New Piskel (3).png-3882552c719ee0f46dbaf4ea540864d3.ctex"]
+source_file="res://Assets/images/Hacker.png"
+dest_files=["res://.godot/imported/Hacker.png-4c01bcc250c5f494d058495bf70d72c3.ctex"]
 
 [params]
 
