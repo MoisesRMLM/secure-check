@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdd1tilicixm4"
-path="res://.godot/imported/hacker-removebg-preview.png-1a0f44538278bf9970e6a7b366a629bf.ctex"
+path="res://.godot/imported/Hacker.png-4c01bcc250c5f494d058495bf70d72c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/images/hacker-removebg-preview.png"
-dest_files=["res://.godot/imported/hacker-removebg-preview.png-1a0f44538278bf9970e6a7b366a629bf.ctex"]
+source_file="res://Assets/images/Hacker.png"
+dest_files=["res://.godot/imported/Hacker.png-4c01bcc250c5f494d058495bf70d72c3.ctex"]
 
 [params]
 
