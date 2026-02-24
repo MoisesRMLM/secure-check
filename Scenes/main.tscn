@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://drhny6gifapta"]
 
 [ext_resource type="Script" uid="uid://koohymj8lpwh" path="res://Scripts/main.gd" id="1_kry3j"]
-[ext_resource type="Texture2D" uid="uid://x7iowixeo88n" path="res://Assets/images/Gemini_Generated_Image_fzlfz3fzlfz3fzlf-removebg-preview.png" id="2_21xkr"]
+[ext_resource type="Texture2D" uid="uid://x7iowixeo88n" path="res://Assets/images/BackgroundAnimationPlayer.png" id="2_21xkr"]
 [ext_resource type="Texture2D" uid="uid://nav5eq7atgsk" path="res://Assets/images/AnimatedSprite.png" id="3_6bp64"]
 [ext_resource type="AudioStream" uid="uid://bvhpsmkw6osb8" path="res://Assets/sound/sound footsteps.mp3" id="4_21xkr"]
 [ext_resource type="Texture2D" uid="uid://car2s8mupt1t" path="res://Assets/images/DesktopScreen.jpg" id="4_344ge"]
