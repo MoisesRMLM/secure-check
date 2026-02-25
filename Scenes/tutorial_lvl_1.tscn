@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://crebrqf1tg234"]
+[gd_scene format=3 uid="uid://crebrqf1tg234"]
 
 [ext_resource type="Script" uid="uid://0wgqusds7cdv" path="res://Scripts/tutorial_lvl_1.gd" id="1_1mn8i"]
 [ext_resource type="StyleBox" uid="uid://c04hsr682c0gd" path="res://Styles/RedButton.tres" id="2_kcx0m"]
