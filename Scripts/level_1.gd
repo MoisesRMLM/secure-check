@@ -2,18 +2,29 @@ extends Node2D
 
 const PASSWORD = preload("res://Scenes/password.tscn")
 
-var contador: int = 0
+var counter: int
+var hp: int
 
 func _ready():
-	%Contador.text = str(contador) + "/10"
+	counter = 0
+	hp = 5
+	%Counter.text = str(counter) + "/10"
+	%Hp.value = hp
 
 #When the counter reaches 10, you complete the level
 func correct():
-	contador += 1
-	%Contador.text = str(contador) + "/10"
+	counter += 1
+	%Counter.text = str(counter) + "/10"
+	
+	if counter >= 10:
+		get_tree().change_scene_to_file("res://Scenes/victory1.tscn")
 
 func incorrect():
-	pass #Add LifeBar code here
+	hp -= 1
+	%Hp.value = hp
+	
+	if hp <= 0:
+		get_tree().change_scene_to_file("res://Scenes/game_over1.tscn")
 
 func spawn_password():
 	%Spawner.progress_ratio = randf()

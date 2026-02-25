@@ -5,7 +5,7 @@ const SYMBOLS = ["!", "@", "$", "%", "&", "/", "=", "?", "+", "-", ",", ".", "*"
 const LETTERS = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"]
 const SPECIAL_PASSWORDS = ["Hello world", "123456", "654321", "password", "password1234", "user", "admin", "p@$$w0rd", "@dmin", "us3r"]
 const PASS_TYPE_LIST = ["word", "combinedv1", "combinedv2", "random", "special"]
-const MAX_DISTANCE: int = 2000
+const MAX_DISTANCE: int = 1500
 
 var pass_type: String #Determines how the password will generate
 var random_number: int
@@ -74,10 +74,10 @@ func _on_trashed_timer_timeout() -> void:
 #Note: Button is set to max modulate.a to make it invisible
 func _on_button_pressed() -> void:
 	trashed = true
-	global_position.x = 130*randf()+950
+	global_position.x = 115*randf()+950
 	global_position.y = 450
 	global_rotation_degrees = 0
-	rotation_degrees = 20*randf()+80
+	rotation_degrees = 10*randf()+85
 	
 	if !secure:
 		get_tree().call_group("level1", "correct")
