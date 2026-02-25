@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cqhqkxrmvtik1"]
 
+[ext_resource type="Script" uid="uid://2bc1d62c4cgm" path="res://Scripts/victory.gd" id="1_1fp7o"]
+
 [node name="Victory" type="Control" unique_id=1904018232]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1fp7o")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=98075648]
 layout_mode = 1
@@ -32,7 +35,7 @@ theme_override_colors/font_color = Color(0.22879949, 0.7303557, 0.85349053, 1)
 theme_override_font_sizes/font_size = 32
 text = "Congratulations"
 
-[node name="Button" type="Button" parent="." unique_id=842766963]
+[node name="Play again" type="Button" parent="." unique_id=842766963]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.363
@@ -45,7 +48,7 @@ offset_right = 64.824005
 offset_bottom = -261.0
 text = "Play Again"
 
-[node name="Button2" type="Button" parent="." unique_id=1272766596]
+[node name="Quit" type="Button" parent="." unique_id=1272766596]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.60700005
@@ -57,3 +60,6 @@ offset_top = -289.0
 offset_right = 59.735962
 offset_bottom = -258.0
 text = "Quit"
+
+[connection signal="pressed" from="Play again" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
