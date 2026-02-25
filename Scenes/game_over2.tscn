@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=3 uid="uid://cd0pnepuhf2p2"]
+
+[ext_resource type="Script" uid="uid://y7n24j2qhu73" path="res://Scripts/game_over1.gd" id="1_ojehl"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ojehl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.16078432, 0.16078432, 0.16078432, 0.42745098)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48400003
+anchor_top = 1.0
+anchor_right = 0.48400003
+anchor_bottom = 1.0
+offset_left = -86.568054
+offset_top = -358.0
+offset_right = 87.431946
+offset_bottom = -313.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.9762861, 0.002526311, 0.076757886, 1)
+theme_override_font_sizes/font_size = 32
+text = "Game Over"
+
+[node name="Try Again" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.379
+anchor_top = 1.0
+anchor_right = 0.381
+anchor_bottom = 1.0
+offset_left = -56.608
+offset_top = -296.0
+offset_right = 58.087982
+offset_bottom = -265.0
+text = "Try Again"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.57500005
+anchor_top = 1.0
+anchor_right = 0.57500005
+anchor_bottom = 1.0
+offset_left = -56.400024
+offset_top = -294.0
+offset_right = 56.599976
+offset_bottom = -262.0
+text = "Quit"
+
+[connection signal="pressed" from="Try Again" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_button_2_pressed"]
