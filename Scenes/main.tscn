@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://drhny6gifapta"]
+[gd_scene load_steps=0 format=3 uid="uid://drhny6gifapta"]
 
 [ext_resource type="Script" uid="uid://koohymj8lpwh" path="res://Scripts/main.gd" id="1_kry3j"]
 [ext_resource type="Texture2D" uid="uid://x7iowixeo88n" path="res://Assets/images/BackgroundAnimationPlayer.png" id="2_21xkr"]

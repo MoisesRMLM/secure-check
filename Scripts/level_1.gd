@@ -2,6 +2,19 @@ extends Node2D
 
 const PASSWORD = preload("res://Scenes/password.tscn")
 
+var contador: int = 0
+
+func _ready():
+	%Contador.text = str(contador) + "/10"
+
+#When the counter reaches 10, you complete the level
+func correct():
+	contador += 1
+	%Contador.text = str(contador) + "/10"
+
+func incorrect():
+	pass #Add LifeBar code here
+
 func spawn_password():
 	%Spawner.progress_ratio = randf()
 	
