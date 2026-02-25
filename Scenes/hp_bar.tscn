@@ -1,12 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://0xlyjgt8e0fx"]
+[gd_scene load_steps=4 format=3 uid="uid://0xlyjgt8e0fx"]
 
-[ext_resource type="Texture2D" uid="uid://c5wc6u1d2vej5" path="res://Assets/images/LifeBarEmpty.png" id="1_2mfnm"]
-[ext_resource type="Texture2D" uid="uid://dit3mxka477j6" path="res://Assets/images/LifeBarFull.png" id="2_82c4i"]
-[ext_resource type="Script" uid="uid://dwq7eyiyj4o66" path="res://Scripts/bar.gd" id="3_8rh8v"]
 [ext_resource type="Texture2D" uid="uid://d1rtpfp871nji" path="res://Assets/images/Computer.png" id="4_eftqp"]
 [ext_resource type="Texture2D" uid="uid://chkslx382j8id" path="res://Assets/images/BrokenComputer.png" id="5_64w4h"]
 [ext_resource type="Texture2D" uid="uid://cdd1tilicixm4" path="res://Assets/images/Hacker.png" id="6_38fyl"]
-[ext_resource type="AudioStream" uid="uid://dv5icu7s00164" path="res://Assets/sound/Murasato Shota - Spiral and Heartbeat.mp3" id="7_82skb"]
 
 [node name="Lifebar" type="Node2D"]
 
@@ -18,37 +14,17 @@ offset_right = 921.0
 offset_bottom = 303.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Bar" type="TextureProgressBar" parent="."]
-anchors_preset = -1
-anchor_left = 0.096
-anchor_top = -0.064
-anchor_right = 0.096
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 1149.0
-offset_bottom = 267.528
-step = 0.01
-value = 90.0
-nine_patch_stretch = true
-texture_under = ExtResource("1_2mfnm")
-texture_progress = ExtResource("2_82c4i")
-script = ExtResource("3_8rh8v")
-
-[node name="Left" type="Sprite2D" parent="Bar"]
-position = Vector2(143, 79)
+[node name="Left" type="Sprite2D" parent="Control"]
+position = Vector2(144, -72)
 scale = Vector2(0.25413224, 0.251938)
 texture = ExtResource("4_eftqp")
 
-[node name="Right" type="Sprite2D" parent="Bar"]
-position = Vector2(917.00006, 61)
+[node name="Right" type="Sprite2D" parent="Control"]
+position = Vector2(918.00006, -76)
 scale = Vector2(0.462, 0.462)
 texture = ExtResource("5_64w4h")
 
-[node name="Top" type="Sprite2D" parent="Bar"]
-position = Vector2(519, 0.9999695)
+[node name="Top" type="Sprite2D" parent="Control"]
+position = Vector2(520, -150.00003)
 scale = Vector2(0.37323943, 0.37323943)
 texture = ExtResource("6_38fyl")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Bar"]
-stream = ExtResource("7_82skb")
-autoplay = true
