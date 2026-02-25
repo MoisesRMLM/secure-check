@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="secure check"
-run/main_scene="uid://igrnln2h4mxv"
+run/main_scene="uid://drhny6gifapta"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/image="uid://b2e2vsro5udy0"
 config/icon="uid://b2e2vsro5udy0"
