@@ -1,13 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://igrnln2h4mxv"]
+[gd_scene load_steps=5 format=3 uid="uid://igrnln2h4mxv"]
 
 [ext_resource type="Script" uid="uid://cf7vrrcmx05nw" path="res://Scripts/level_1.gd" id="1_lyd6k"]
 [ext_resource type="Texture2D" uid="uid://qcxokauv8cno" path="res://Assets/images/binbottom.png" id="1_vly50"]
 [ext_resource type="Texture2D" uid="uid://fvuw0e8a3j0u" path="res://Assets/images/bintop.png" id="2_c5erv"]
-[ext_resource type="PackedScene" uid="uid://bmmbd084jqms0" path="res://Scenes/password.tscn" id="3_c5erv"]
 
 [sub_resource type="Curve2D" id="Curve2D_vly50"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 8, -85, 0, 0, 0, 0, 1137.9077, -84.72905)
+"points": PackedVector2Array(0, 0, 0, 0, 102.158966, -84.729095, 0, 0, 0, 0, 1137.9077, -84.72905)
 }
 point_count = 2
 
@@ -34,19 +33,15 @@ position = Vector2(7.6293945e-06, 0.22222519)
 texture = ExtResource("2_c5erv")
 
 [node name="Path2D" type="Path2D" parent="."]
-position = Vector2(75.17668, -283.99997)
-scale = Vector2(0.47791517, 0.826163)
+position = Vector2(139.99605, -191.66661)
+scale = Vector2(0.42095152, 0.6884692)
 curve = SubResource("Curve2D_vly50")
 
 [node name="Spawner" type="PathFollow2D" parent="Path2D"]
 unique_name_in_owner = true
-position = Vector2(8, -85)
+position = Vector2(102.158966, -84.729095)
 rotation = 0.00023979862
 rotates = false
-
-[node name="Password" parent="." instance=ExtResource("3_c5erv")]
-position = Vector2(130, 351)
-rotation = -1.5707964
 
 [node name="SpawnTime" type="Timer" parent="."]
 unique_name_in_owner = true
