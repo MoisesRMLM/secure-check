@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bnyiy1yoqbgup"]
+[gd_scene load_steps=4 format=3 uid="uid://bnyiy1yoqbgup"]
 
 [ext_resource type="Script" uid="uid://dq2jft17cfprh" path="res://Scripts/main_menu.gd" id="1_28flt"]
 [ext_resource type="Texture2D" uid="uid://c0gvkwlaajcvc" path="res://Assets/images/background_mainmenu.png" id="2_48xlc"]
@@ -11,7 +11,7 @@ initial_velocity_min = 50.0
 initial_velocity_max = 100.0
 gravity = Vector3(0, 0, 0)
 
-[node name="MainMenu" type="Control" unique_id=1280907123]
+[node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,14 +20,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_28flt")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1924135987]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 640.0
 texture = ExtResource("2_48xlc")
 expand_mode = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=701344928]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,40 +38,40 @@ theme_override_constants/margin_left = 400
 theme_override_constants/margin_top = 150
 theme_override_constants/margin_right = 400
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer" unique_id=163754994]
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer2" unique_id=1671632341]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Secure Check"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1864870653]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Start" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1210357795]
+[node name="Start" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.014275194, 0.014275219, 0.014275289, 1)
 theme_override_constants/h_separation = 10
 theme_override_font_sizes/font_size = 30
 text = "Start"
 
-[node name="Options" type="Button" parent="MarginContainer/VBoxContainer" unique_id=264911648]
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.0010853418, 0.0010853448, 0.0010853499, 1)
 theme_override_font_sizes/font_size = 30
 text = "Options"
 
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=891821779]
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Quit"
 
-[node name="Control" type="Control" parent="." unique_id=2118846651]
+[node name="Control" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -81,7 +81,7 @@ offset_right = 40.0
 offset_bottom = 20.0
 grow_vertical = 2
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="Control" unique_id=1168326531]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Control"]
 amount = 500
 lifetime = 20.0
 preprocess = 20.0
