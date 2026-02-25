@@ -11,7 +11,6 @@ var pass_type: String #Determines how the password will generate
 var random_number: int
 var secure: bool
 var trashed: bool = false
-var waiting_removal: bool = false
 var distance: int = 0
 
 func _ready():
@@ -64,16 +63,10 @@ func _process(_delta):
 		
 		distance += 5
 		if distance >= MAX_DISTANCE:
+			if !secure:
+				get_tree().call_group("level1", "incorrect")
+			
 			queue_free()
-	else:
-		if !waiting_removal:
-			waiting_removal = true
-			
-			global_position.x = 100*randf()+911
-			global_position.y = 458
-			rotation_degrees = 45*randf()+45
-			
-			%TrashedTimer.start()
 
 func _on_trashed_timer_timeout() -> void:
 	queue_free()
@@ -81,3 +74,15 @@ func _on_trashed_timer_timeout() -> void:
 #Note: Button is set to max modulate.a to make it invisible
 func _on_button_pressed() -> void:
 	trashed = true
+	global_position.x = 130*randf()+950
+	global_position.y = 450
+	global_rotation_degrees = 0
+	rotation_degrees = 20*randf()+80
+	
+	if !secure:
+		get_tree().call_group("level1", "correct")
+	else:
+		get_tree().call_group("level1", "incorrect")
+	
+	%Button.disabled = true
+	%TrashedTimer.start()

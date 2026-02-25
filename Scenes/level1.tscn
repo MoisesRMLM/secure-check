@@ -1,8 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://igrnln2h4mxv"]
+[gd_scene load_steps=8 format=3 uid="uid://igrnln2h4mxv"]
 
 [ext_resource type="Script" uid="uid://cf7vrrcmx05nw" path="res://Scripts/level_1.gd" id="1_lyd6k"]
 [ext_resource type="Texture2D" uid="uid://qcxokauv8cno" path="res://Assets/images/binbottom.png" id="1_vly50"]
 [ext_resource type="Texture2D" uid="uid://fvuw0e8a3j0u" path="res://Assets/images/bintop.png" id="2_c5erv"]
+[ext_resource type="FontFile" uid="uid://dqryolu2dufiv" path="res://Assets/font/dos_8x8_font_white.png" id="4_y4dr7"]
+[ext_resource type="PackedScene" uid="uid://0xlyjgt8e0fx" path="res://Scenes/hp_bar.tscn" id="5_didp7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c5erv"]
+font = ExtResource("4_y4dr7")
+font_size = 30
 
 [sub_resource type="Curve2D" id="Curve2D_vly50"]
 _data = {
@@ -10,15 +16,42 @@ _data = {
 }
 point_count = 2
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" groups=["level1"]]
 top_level = true
 script = ExtResource("1_lyd6k")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Backgorund" type="ColorRect" parent="."]
 offset_right = 1152.0
-offset_bottom = 647.0
+offset_bottom = 648.0
 color = Color(0.65882355, 0.65882355, 0.65882355, 1)
 metadata/_edit_lock_ = true
+
+[node name="BlueBottom" type="ColorRect" parent="Backgorund"]
+z_index = 2
+layout_mode = 0
+offset_top = 542.0
+offset_right = 861.0
+offset_bottom = 648.0
+color = Color(0.35686275, 0.70980394, 0.7882353, 1)
+
+[node name="BlueRight" type="ColorRect" parent="Backgorund"]
+layout_mode = 0
+offset_left = 860.0
+offset_top = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.35686275, 0.70980394, 0.7882353, 1)
+
+[node name="Contador" type="Label" parent="." groups=["level1"]]
+unique_name_in_owner = true
+z_index = 2
+offset_left = 949.0
+offset_top = 505.0
+offset_right = 1048.0
+offset_bottom = 586.0
+label_settings = SubResource("LabelSettings_c5erv")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Binbottom" type="Sprite2D" parent="."]
 z_index = 1
@@ -46,5 +79,10 @@ rotates = false
 [node name="SpawnTime" type="Timer" parent="."]
 unique_name_in_owner = true
 autostart = true
+
+[node name="LifeBar" parent="." instance=ExtResource("5_didp7")]
+z_index = 3
+position = Vector2(28, 549)
+scale = Vector2(0.75, 0.75)
 
 [connection signal="timeout" from="SpawnTime" to="." method="_on_spawn_time_timeout"]
