@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cqhqkxrmvtik1"]
+
+[node name="Victory" type="Control" unique_id=1904018232]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=98075648]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.21647838, 0.23956856, 0.23957068, 0.5176471)
+
+[node name="Label" type="Label" parent="." unique_id=605073253]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.483
+anchor_top = 1.0
+anchor_right = 0.483
+anchor_bottom = 1.0
+offset_left = -124.416016
+offset_top = -361.0
+offset_right = 123.583984
+offset_bottom = -316.0
+theme_override_colors/font_color = Color(0.22879949, 0.7303557, 0.85349053, 1)
+theme_override_font_sizes/font_size = 32
+text = "Congratulations"
+
+[node name="Button" type="Button" parent="." unique_id=842766963]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.363
+anchor_top = 1.0
+anchor_right = 0.363
+anchor_bottom = 1.0
+offset_left = -65.175995
+offset_top = -292.0
+offset_right = 64.824005
+offset_bottom = -261.0
+text = "Play Again"
+
+[node name="Button2" type="Button" parent="." unique_id=1272766596]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.60700005
+anchor_top = 1.0
+anchor_right = 0.60700005
+anchor_bottom = 1.0
+offset_left = -60.264038
+offset_top = -289.0
+offset_right = 59.735962
+offset_bottom = -258.0
+text = "Quit"
