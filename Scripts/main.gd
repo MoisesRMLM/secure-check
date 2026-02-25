@@ -24,7 +24,7 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if event.double_click and event.pressed:
 			if $CanvasLayer/DesktopScreen/Logo.get_rect().has_point(to_local(event.position)):
-				$AnimationPlayer.play("FirstAnimationPlayer")
+				get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 
 func pause_animation():
 	$AnimationPlayer.pause()

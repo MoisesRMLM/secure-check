@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://koohymj8lpwh" path="res://Scripts/main.gd" id="1_kry3j"]
 [ext_resource type="Texture2D" uid="uid://x7iowixeo88n" path="res://Assets/images/BackgroundAnimationPlayer.png" id="2_21xkr"]
 [ext_resource type="Texture2D" uid="uid://nav5eq7atgsk" path="res://Assets/images/AnimatedSprite.png" id="3_6bp64"]
-[ext_resource type="AudioStream" uid="uid://bvhpsmkw6osb8" path="res://Assets/sound/sound footsteps.mp3" id="4_21xkr"]
 [ext_resource type="Texture2D" uid="uid://car2s8mupt1t" path="res://Assets/images/DesktopScreen.jpg" id="4_344ge"]
 [ext_resource type="Texture2D" uid="uid://b2e2vsro5udy0" path="res://Assets/images/SecureCheck.png" id="5_ynf5e"]
 
@@ -106,52 +105,37 @@ tracks/3/keys = {
 "update": 1,
 "values": [false, true, false]
 }
-tracks/4/type = "audio"
+tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Player/FootSteps")
+tracks/4/path = NodePath("CanvasLayer/DesktopScreen/Logo:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"clips": [{
-"end_offset": 5.1199994,
-"start_offset": 0.0,
-"stream": ExtResource("4_21xkr")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/4/use_blend = true
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("CanvasLayer/DesktopScreen/Logo:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
 "times": PackedFloat32Array(4),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(-1720.9999, -1098.9999)]
 }
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("CanvasLayer/DesktopScreen/Logo:visible")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/DesktopScreen/Logo:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
 "times": PackedFloat32Array(4),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
 }
-tracks/7/type = "method"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath(".")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
 "times": PackedFloat32Array(4),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -258,8 +242,7 @@ sprite_frames = SubResource("SpriteFrames_dg77c")
 animation = &"walk"
 flip_h = true
 
-[node name="FootSteps" type="AudioStreamPlayer2D" parent="Player" unique_id=2084174030]
-volume_db = 24.0
+[node name="FootSteps" type="AudioStreamPlayer" parent="Player" unique_id=833974353]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1231702826]
 
