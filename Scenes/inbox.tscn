@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://pmg4e31uukpu"]
 
 [ext_resource type="Texture2D" uid="uid://5370t54yr0e2" path="res://Photos/email_icon.png" id="1_ctpb2"]
-[ext_resource type="Script" path="res://Scripts/inbox.gd" id="1_t5pcu"]
-[ext_resource type="Script" path="res://Scripts/emailData.gd" id="2_fms44"]
+[ext_resource type="Script" uid="uid://c54ecnug7w1li" path="res://Scripts/inbox.gd" id="1_t5pcu"]
+[ext_resource type="Script" uid="uid://cgiajeiqd5ja8" path="res://Scripts/emailData.gd" id="2_fms44"]
 [ext_resource type="Resource" uid="uid://bxofofk77uumh" path="res://Emails/email1.tres" id="3_vfo86"]
 [ext_resource type="Resource" uid="uid://cscc7poclnnje" path="res://Emails/email2.tres" id="4_nqgr2"]
 [ext_resource type="Resource" uid="uid://dwbh18qf7ovw5" path="res://Emails/email3.tres" id="5_tkc3k"]
