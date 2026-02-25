@@ -7,7 +7,7 @@ func spawn_password():
 	
 	var new_password = PASSWORD.instantiate()
 	new_password.global_position = %Spawner.global_position
-	new_password.rotation_degrees = 360*randf()
+	new_password.rotation_degrees = 90*randf()-45
 	%Spawner.add_child(new_password)
 
 func _on_spawn_time_timeout() -> void:
