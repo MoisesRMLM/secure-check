@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dww6n0nchidvw" path="res://Scripts/options.gd" id="1_prnvy"]
 [ext_resource type="StyleBox" uid="uid://bqslmnqc2l3pl" path="res://Styles/main_menuButton.tres" id="2_qyyw6"]
-[ext_resource type="Texture2D" uid="uid://c0gvkwlaajcvc" path="res://Assets/images/background_mainmenu.png" id="2_ww8vx"]
 [ext_resource type="StyleBox" uid="uid://yn5jxefkjhak" path="res://Styles/main_menuHover.tres" id="3_ww8vx"]
+[ext_resource type="Texture2D" uid="uid://b184dnj8fcv4k" path="res://Assets/images/cs6.png" id="4_ww8vx"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ww8vx"]
 particle_flag_disable_z = true
@@ -22,14 +22,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_prnvy")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=307799275]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1477092611]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
-offset_bottom = 1024.0
+anchor_bottom = 1.0
+offset_right = 768.0
+offset_bottom = 312.0
 grow_horizontal = 2
-scale = Vector2(1.0020852, 0.6343064)
-texture = ExtResource("2_ww8vx")
+grow_vertical = 2
+scale = Vector2(0.60002637, 0.6757026)
+texture = ExtResource("4_ww8vx")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=915955619]
 layout_mode = 1

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bnyiy1yoqbgup"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_28flt"]
-[ext_resource type="Texture2D" uid="uid://c0gvkwlaajcvc" path="res://Assets/images/background_mainmenu.png" id="2_48xlc"]
+[ext_resource type="Texture2D" uid="uid://b184dnj8fcv4k" path="res://Assets/images/cs6.png" id="2_ce3w2"]
 [ext_resource type="StyleBox" uid="uid://bqslmnqc2l3pl" path="res://Styles/main_menuButton.tres" id="3_1ehe0"]
 [ext_resource type="StyleBox" uid="uid://yn5jxefkjhak" path="res://Styles/main_menuHover.tres" id="4_ce3w2"]
 
@@ -26,8 +26,8 @@ script = ExtResource("1_28flt")
 layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 640.0
-scale = Vector2(0.99807906, 1.0128492)
-texture = ExtResource("2_48xlc")
+scale = Vector2(0.9982618, 1.013545)
+texture = ExtResource("2_ce3w2")
 expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=701344928]
