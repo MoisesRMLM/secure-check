@@ -1,0 +1,280 @@
+[gd_scene format=3 uid="uid://drhny6gifapta"]
+
+[ext_resource type="Script" uid="uid://koohymj8lpwh" path="res://Scripts/main.gd" id="1_kry3j"]
+[ext_resource type="Texture2D" uid="uid://x7iowixeo88n" path="res://Assets/images/BackgroundAnimationPlayer.png" id="2_21xkr"]
+[ext_resource type="Texture2D" uid="uid://nav5eq7atgsk" path="res://Assets/images/AnimatedSprite.png" id="3_6bp64"]
+[ext_resource type="AudioStream" uid="uid://bvhpsmkw6osb8" path="res://Assets/sound/sound footsteps.mp3" id="4_21xkr"]
+[ext_resource type="Texture2D" uid="uid://car2s8mupt1t" path="res://Assets/images/DesktopScreen.jpg" id="4_344ge"]
+[ext_resource type="Texture2D" uid="uid://b2e2vsro5udy0" path="res://Assets/images/SecureCheck.png" id="5_ynf5e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_272bh"]
+atlas = ExtResource("3_6bp64")
+region = Rect2(475, 0, 95, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vw27"]
+atlas = ExtResource("3_6bp64")
+region = Rect2(760, 0, 95, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kek77"]
+atlas = ExtResource("3_6bp64")
+region = Rect2(665, 0, 95, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4c57u"]
+atlas = ExtResource("3_6bp64")
+region = Rect2(570, 0, 95, 280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efxa6"]
+atlas = ExtResource("3_6bp64")
+region = Rect2(475, 0, 95, 280)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dg77c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_272bh")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vw27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kek77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4c57u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efxa6")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_1bvp3"]
+resource_name = "FirstAnimationPlayer"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(680, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2, 2)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(282.545, -22.035)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/DesktopScreen:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Player/FootSteps")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 5.1199994,
+"start_offset": 0.0,
+"stream": ExtResource("4_21xkr")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/4/use_blend = true
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/DesktopScreen/Logo:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1720.9999, -1098.9999)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/DesktopScreen/Logo:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"pause_animation"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_lquwl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/DesktopScreen:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/DesktopScreen/Logo:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/DesktopScreen/Logo:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1720.9999, -1098.9999)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7mycd"]
+_data = {
+&"FirstAnimationPlayer": SubResource("Animation_1bvp3"),
+&"RESET": SubResource("Animation_lquwl")
+}
+
+[node name="Main" type="Node2D" unique_id=990406436]
+script = ExtResource("1_kry3j")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=821287712]
+position = Vector2(0.99998474, -2.0000052)
+scale = Vector2(2.292, 1.292)
+texture = ExtResource("2_21xkr")
+
+[node name="Player" type="Node2D" parent="." unique_id=763481886]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1326180598]
+position = Vector2(-447.00006, 37.000004)
+scale = Vector2(0.7631579, 0.71428573)
+sprite_frames = SubResource("SpriteFrames_dg77c")
+animation = &"walk"
+flip_h = true
+
+[node name="FootSteps" type="AudioStreamPlayer2D" parent="Player" unique_id=2084174030]
+volume_db = 24.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1231702826]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1813484074]
+
+[node name="DesktopScreen" type="Sprite2D" parent="CanvasLayer" unique_id=1555652147]
+position = Vector2(569.5, 324.49997)
+scale = Vector2(0.30078125, 0.25039062)
+texture = ExtResource("4_344ge")
+
+[node name="Logo" type="Sprite2D" parent="CanvasLayer/DesktopScreen" unique_id=1606308734]
+position = Vector2(-1720.9999, -1098.9999)
+scale = Vector2(0.32000008, 0.32000008)
+texture = ExtResource("5_ynf5e")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1361626297]
+libraries/ = SubResource("AnimationLibrary_7mycd")
+autoplay = &"FirstAnimationPlayer"
