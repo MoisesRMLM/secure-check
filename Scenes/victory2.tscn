@@ -1,17 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://c83nwfrab5bj1"]
+[gd_scene format=3 uid="uid://01x3cirur2qp"]
 
-[ext_resource type="Script" uid="uid://jnxd5vimfvfs" path="res://Scripts/victory1.gd" id="1_aavvn"]
+[ext_resource type="Script" uid="uid://cvwu8cyxygvq6" path="res://Scripts/victory_2.gd" id="1_ghbfw"]
 
-[node name="Victory" type="Control"]
+[node name="Victory" type="Control" unique_id=2122764563]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_aavvn")
+script = ExtResource("1_ghbfw")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1830842599]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,7 +20,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.21647838, 0.23956856, 0.23957068, 0.5176471)
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1161025788]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.483
@@ -35,7 +35,7 @@ theme_override_colors/font_color = Color(0.22879949, 0.7303557, 0.85349053, 1)
 theme_override_font_sizes/font_size = 32
 text = "Congratulations"
 
-[node name="Play again" type="Button" parent="."]
+[node name="Play again" type="Button" parent="." unique_id=1891679171]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.363
@@ -46,9 +46,9 @@ offset_left = -65.175995
 offset_top = -292.0
 offset_right = 64.824005
 offset_bottom = -261.0
-text = "Play Again"
+text = "Back menu"
 
-[node name="Quit" type="Button" parent="."]
+[node name="Quit" type="Button" parent="." unique_id=427478118]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.60700005
