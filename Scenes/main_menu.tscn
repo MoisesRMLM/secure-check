@@ -1,7 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://bnyiy1yoqbgup"]
 
-[ext_resource type="Script" uid="uid://dq2jft17cfprh" path="res://Scripts/main_menu.gd" id="1_28flt"]
-[ext_resource type="Texture2D" uid="uid://c0gvkwlaajcvc" path="res://Assets/images/background_mainmenu.png" id="2_48xlc"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://b184dnj8fcv4k" path="res://Assets/images/cs6.png" id="2_ce3w2"]
+[ext_resource type="StyleBox" uid="uid://bqslmnqc2l3pl" path="res://Styles/main_menuButton.tres" id="3_1ehe0"]
+[ext_resource type="StyleBox" uid="uid://yn5jxefkjhak" path="res://Styles/main_menuHover.tres" id="4_ce3w2"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_28flt"]
 particle_flag_disable_z = true
@@ -24,7 +26,8 @@ script = ExtResource("1_28flt")
 layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 640.0
-texture = ExtResource("2_48xlc")
+scale = Vector2(0.9982618, 1.013545)
+texture = ExtResource("2_ce3w2")
 expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -57,18 +60,27 @@ layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.014275194, 0.014275219, 0.014275289, 1)
 theme_override_constants/h_separation = 10
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_1ehe0")
+theme_override_styles/pressed = ExtResource("3_1ehe0")
+theme_override_styles/hover = ExtResource("4_ce3w2")
 text = "Start"
 
 [node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.0010853418, 0.0010853448, 0.0010853499, 1)
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_1ehe0")
+theme_override_styles/pressed = ExtResource("3_1ehe0")
+theme_override_styles/hover = ExtResource("4_ce3w2")
 text = "Options"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_1ehe0")
+theme_override_styles/pressed = ExtResource("3_1ehe0")
+theme_override_styles/hover = ExtResource("4_ce3w2")
 text = "Quit"
 
 [node name="Control" type="Control" parent="."]
