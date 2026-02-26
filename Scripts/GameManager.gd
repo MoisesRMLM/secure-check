@@ -12,7 +12,7 @@ func lose_life():
 		print("Game Over")
 		# Give a small delay so the player sees the last mistake
 		await get_tree().create_timer(0.3).timeout
-		get_tree().change_scene_to_file("res://Scenes/game_over1.tscn")
+		get_tree().change_scene_to_file("res://Scenes/game_over2.tscn")
 
 func check_victory_condition():
 	# If all emails in the list have been processed, player wins
@@ -20,3 +20,9 @@ func check_victory_condition():
 		print("Victory!")
 		await get_tree().create_timer(0.5).timeout
 		get_tree().change_scene_to_file("res://Scenes/victory2.tscn")
+		
+
+func reset_game():
+	lives = 3
+	deleted_emails.clear()
+	# Si tienes más variables como puntos o tiempo, resetealas aquí también
