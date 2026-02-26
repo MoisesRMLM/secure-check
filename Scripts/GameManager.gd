@@ -4,6 +4,8 @@ var deleted_emails = []
 var current_email_data: EmailData
 var lives: int = 3
 var total_emails: int = 0 # This will be set by the Inbox
+var tutorial_shown: bool = false
+
 
 func lose_life():
 	lives -= 1

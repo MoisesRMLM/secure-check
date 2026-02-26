@@ -475,6 +475,7 @@ layout_mode = 2
 texture = ExtResource("13_ii1lt")
 
 [node name="StartPanel" type="Panel" parent="." unique_id=1150630422]
+visible = false
 top_level = true
 layout_mode = 1
 anchors_preset = 15
