@@ -4,13 +4,18 @@ extends Control
 @export var email_list: Array[EmailData]
 
 func _ready():
-	$StartPanel.show()
+	if GameManager.tutorial_shown == false:
+		$StartPanel.show()
+	else:
+		$StartPanel.hide()
 	# Upon loading, we remove the buttons that have already been processed
 	for email_id in GameManager.deleted_emails:
 		if has_node("VBoxContainer/" + email_id):
 			get_node("VBoxContainer/" + email_id).queue_free()
 	GameManager.total_emails=email_list.size()
 	update_hearts()
+	
+	
 # --- SIGNALS CONNECTED FROM THE EDITOR ---
 
 func _on_button_pressed():
@@ -84,8 +89,8 @@ func update_hearts():
 
 # --- Start  ---
 func _on_start_mission_pressed():
-	# Ocultamos el panel para que el usuario pueda ver los correos
 	$StartPanel.hide()
+	GameManager.tutorial_shown = true
 	print("Game started!")
 
 # --- HELP PANEL BUTTONS ---
