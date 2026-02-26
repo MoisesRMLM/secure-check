@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dxo0vkxkgr8xn"]
+[gd_scene load_steps=8 format=3 uid="uid://dqfyjjn08ka42"]
 
 [ext_resource type="Texture2D" uid="uid://c5wc6u1d2vej5" path="res://Assets/images/LifeBarEmpty.png" id="1_rut62"]
 [ext_resource type="Texture2D" uid="uid://dit3mxka477j6" path="res://Assets/images/LifeBarFull.png" id="2_jnx3k"]
@@ -8,22 +8,22 @@
 [ext_resource type="Texture2D" uid="uid://cdd1tilicixm4" path="res://Assets/images/Hacker.png" id="6_h17iw"]
 [ext_resource type="AudioStream" uid="uid://dv5icu7s00164" path="res://Assets/sound/Murasato Shota - Spiral and Heartbeat.mp3" id="7_12xny"]
 
-[node name="LifeBar" type="Node" unique_id=1755414142]
+[node name="LifeBar" type="Node"]
 
-[node name="Control" type="Control" parent="." unique_id=1516392912]
+[node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1485.0
 offset_bottom = 808.0
 
-[node name="Bar" type="TextureProgressBar" parent="." unique_id=2074675900]
+[node name="Bar" type="TextureProgressBar" parent="."]
 anchors_preset = -1
 anchor_left = 0.096
 anchor_top = -0.064
 anchor_right = 0.096
 offset_left = -108.592
 offset_top = 241.472
-offset_right = 1050.408
+offset_right = 1039.408
 offset_bottom = 508.0
 step = 0.01
 value = 90.0
@@ -32,7 +32,7 @@ texture_under = ExtResource("1_rut62")
 texture_progress = ExtResource("2_jnx3k")
 script = ExtResource("3_58woq")
 
-[node name="Left" type="TextureRect" parent="Bar" unique_id=1513708419]
+[node name="Left" type="TextureRect" parent="Bar"]
 custom_minimum_size = Vector2(0, 0.5)
 layout_mode = 1
 anchors_preset = 2
@@ -47,7 +47,7 @@ texture = ExtResource("4_gfsve")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Right" type="TextureRect" parent="Bar" unique_id=1194415979]
+[node name="Right" type="TextureRect" parent="Bar"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -64,7 +64,7 @@ texture = ExtResource("5_kvf7x")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Top" type="TextureRect" parent="Bar" unique_id=1472976279]
+[node name="Top" type="TextureRect" parent="Bar"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -78,6 +78,6 @@ texture = ExtResource("6_h17iw")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Bar" unique_id=1551738855]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Bar"]
 stream = ExtResource("7_12xny")
 autoplay = true

@@ -12,6 +12,7 @@
 [ext_resource type="StyleBox" uid="uid://c04hsr682c0gd" path="res://Styles/RedButton.tres" id="7_tkc3k"]
 [ext_resource type="StyleBox" uid="uid://be4xmedchw1c2" path="res://Styles/HoverGreenButton.tres" id="8_2w40r"]
 [ext_resource type="StyleBox" uid="uid://7vh3wd7ded63" path="res://Styles/HoverRedButton.tres" id="9_mj77x"]
+[ext_resource type="Texture2D" uid="uid://djuaqw0oqdmxw" path="res://Photos/hearth.png" id="13_ii1lt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2w40r"]
 bg_color = Color(0, 0.5882353, 0.65882355, 1)
@@ -46,7 +47,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.65834, 0.65834, 0.6583398, 1)
 
-[node name="Header" type="ColorRect" parent="." unique_id=581643691]
+[node name="Header1" type="ColorRect" parent="." unique_id=581643691]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -54,7 +55,7 @@ offset_bottom = 71.0
 grow_horizontal = 2
 color = Color(0.35595164, 0.7083737, 0.7891075, 1)
 
-[node name="Label" type="Label" parent="Header" unique_id=480523886]
+[node name="Label" type="Label" parent="Header1" unique_id=480523886]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -67,7 +68,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 text = "EMAIL"
 
-[node name="help" type="Button" parent="Header" unique_id=1986007471]
+[node name="help" type="Button" parent="Header1" unique_id=1986007471]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.95800006
@@ -449,7 +450,111 @@ theme_override_styles/normal = ExtResource("7_tkc3k")
 theme_override_styles/hover = ExtResource("9_mj77x")
 text = "BACK"
 
-[connection signal="pressed" from="Header/help" to="." method="_on_help_pressed"]
+[node name="Header" type="HBoxContainer" parent="." unique_id=1785596959]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1015.0
+offset_top = 2.0
+offset_right = 43.0
+offset_bottom = 352.0
+grow_horizontal = 0
+scale = Vector2(0.14076418, 0.14292216)
+
+[node name="Heart1" type="TextureRect" parent="Header" unique_id=1631907589]
+layout_mode = 2
+texture = ExtResource("13_ii1lt")
+
+[node name="Heart2" type="TextureRect" parent="Header" unique_id=958816486]
+layout_mode = 2
+texture = ExtResource("13_ii1lt")
+
+[node name="Heart3" type="TextureRect" parent="Header" unique_id=1672665818]
+layout_mode = 2
+texture = ExtResource("13_ii1lt")
+
+[node name="StartPanel" type="Panel" parent="." unique_id=1150630422]
+visible = false
+top_level = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="StartPanel" unique_id=1103457044]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.680294, 0.8160705, 0.96505386, 1)
+
+[node name="Label" type="Label" parent="StartPanel" unique_id=2126276828]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -92.5
+offset_top = 25.0
+offset_right = 92.5
+offset_bottom = 94.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "GAME 2"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="StartPanel" unique_id=1148920726]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -489.25
+offset_top = -204.25
+offset_right = 489.25
+offset_bottom = 294.25
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[b]Your Mission:[/b]
+You are the new Security Officer. Your job is to manage the company's inbox and protect us from cyber attacks.
+
+How to play:
+• [b]Accept[/b] legitimate emails to keep the business running.
+• [b]Decline[/b] phishing emails to avoid security breaches.
+• You have [b]3 lives[/b]. If you accept a scam or decline a real email, you lose a heart.
+
+Be careful, scammers are clever! Use the [b]Help[/b] button if you are not sure."
+
+[node name="start mission" type="Button" parent="StartPanel" unique_id=132175743]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -108.0
+offset_right = 150.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = ExtResource("7_7dd3p")
+theme_override_styles/pressed = ExtResource("7_7dd3p")
+theme_override_styles/hover = ExtResource("8_2w40r")
+text = "Start
+"
+
+[connection signal="pressed" from="Header1/help" to="." method="_on_help_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button/MarginContainer/HBoxContainer/accept" to="." method="_on_accept_pressed" binds= ["Button", 0]]
 [connection signal="pressed" from="VBoxContainer/Button/MarginContainer/HBoxContainer/decline" to="." method="_on_decline_pressed" binds= ["Button", 0]]
@@ -460,9 +565,10 @@ text = "BACK"
 [connection signal="pressed" from="VBoxContainer/Button3/MarginContainer/HBoxContainer/accept" to="." method="_on_accept_pressed" binds= ["Button3", 2]]
 [connection signal="pressed" from="VBoxContainer/Button3/MarginContainer/HBoxContainer/decline" to="." method="_on_decline_pressed" binds= ["Button3", 2]]
 [connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_button_4_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button4/MarginContainer/HBoxContainer/accept" to="." method="_on_accept_pressed" binds= ["Button3", 2]]
-[connection signal="pressed" from="VBoxContainer/Button4/MarginContainer/HBoxContainer/decline" to="." method="_on_decline_pressed" binds= ["Button3", 2]]
+[connection signal="pressed" from="VBoxContainer/Button4/MarginContainer/HBoxContainer/accept" to="." method="_on_accept_pressed" binds= ["Button4", 3]]
+[connection signal="pressed" from="VBoxContainer/Button4/MarginContainer/HBoxContainer/decline" to="." method="_on_decline_pressed" binds= ["Button4", 3]]
 [connection signal="pressed" from="VBoxContainer/Button5" to="." method="_on_button_5_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button5/MarginContainer/HBoxContainer/accept" to="." method="_on_accept_pressed" binds= ["Button3", 2]]
-[connection signal="pressed" from="VBoxContainer/Button5/MarginContainer/HBoxContainer/decline" to="." method="_on_decline_pressed" binds= ["Button3", 2]]
+[connection signal="pressed" from="VBoxContainer/Button5/MarginContainer/HBoxContainer/accept" to="." method="_on_accept_pressed" binds= ["Button5", 4]]
+[connection signal="pressed" from="VBoxContainer/Button5/MarginContainer/HBoxContainer/decline" to="." method="_on_decline_pressed" binds= ["Button5", 4]]
 [connection signal="pressed" from="HelpPanel/closeHelp" to="." method="_on_close_help_pressed"]
+[connection signal="pressed" from="StartPanel/start mission" to="." method="_on_start_mission_pressed"]

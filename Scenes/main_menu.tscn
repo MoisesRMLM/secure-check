@@ -1,8 +1,19 @@
-[gd_scene format=3 uid="uid://bnyiy1yoqbgup"]
+[gd_scene load_steps=4 format=3 uid="uid://bnyiy1yoqbgup"]
 
-[ext_resource type="Script" uid="uid://dq2jft17cfprh" path="res://Scripts/main_menu.gd" id="1_28flt"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://b184dnj8fcv4k" path="res://Assets/images/cs6.png" id="2_ce3w2"]
+[ext_resource type="StyleBox" uid="uid://bqslmnqc2l3pl" path="res://Styles/main_menuButton.tres" id="3_1ehe0"]
+[ext_resource type="StyleBox" uid="uid://yn5jxefkjhak" path="res://Styles/main_menuHover.tres" id="4_ce3w2"]
 
-[node name="MainMenu" type="Control" unique_id=1280907123]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_28flt"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1, 400, 1)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+gravity = Vector3(0, 0, 0)
+
+[node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,7 +22,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_28flt")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=701344928]
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 640.0
+scale = Vector2(0.9982618, 1.013545)
+texture = ExtResource("2_ce3w2")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,30 +41,63 @@ theme_override_constants/margin_left = 400
 theme_override_constants/margin_top = 150
 theme_override_constants/margin_right = 400
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer" unique_id=163754994]
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer2" unique_id=1671632341]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer2"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Secure Check"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1864870653]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Start" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1210357795]
+[node name="Start" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.014275194, 0.014275219, 0.014275289, 1)
+theme_override_constants/h_separation = 10
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_1ehe0")
+theme_override_styles/pressed = ExtResource("3_1ehe0")
+theme_override_styles/hover = ExtResource("4_ce3w2")
 text = "Start"
 
-[node name="Options" type="Button" parent="MarginContainer/VBoxContainer" unique_id=264911648]
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.0010853418, 0.0010853448, 0.0010853499, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_1ehe0")
+theme_override_styles/pressed = ExtResource("3_1ehe0")
+theme_override_styles/hover = ExtResource("4_ce3w2")
 text = "Options"
 
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=891821779]
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("3_1ehe0")
+theme_override_styles/pressed = ExtResource("3_1ehe0")
+theme_override_styles/hover = ExtResource("4_ce3w2")
 text = "Quit"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+grow_vertical = 2
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Control"]
+amount = 500
+lifetime = 20.0
+preprocess = 20.0
+process_material = SubResource("ParticleProcessMaterial_28flt")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]

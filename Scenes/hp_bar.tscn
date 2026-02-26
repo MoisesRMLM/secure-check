@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://0xlyjgt8e0fx"]
+
+[ext_resource type="Texture2D" uid="uid://d1rtpfp871nji" path="res://Assets/images/Computer.png" id="4_eftqp"]
+[ext_resource type="Texture2D" uid="uid://chkslx382j8id" path="res://Assets/images/BrokenComputer.png" id="5_64w4h"]
+[ext_resource type="Texture2D" uid="uid://cdd1tilicixm4" path="res://Assets/images/Hacker.png" id="6_38fyl"]
+
+[node name="Lifebar" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 152.0
+offset_right = 921.0
+offset_bottom = 303.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Left" type="Sprite2D" parent="Control"]
+position = Vector2(144, -72)
+scale = Vector2(0.25413224, 0.251938)
+texture = ExtResource("4_eftqp")
+
+[node name="Right" type="Sprite2D" parent="Control"]
+position = Vector2(918.00006, -76)
+scale = Vector2(0.462, 0.462)
+texture = ExtResource("5_64w4h")
+
+[node name="Top" type="Sprite2D" parent="Control"]
+position = Vector2(520, -150.00003)
+scale = Vector2(0.37323943, 0.37323943)
+texture = ExtResource("6_38fyl")
