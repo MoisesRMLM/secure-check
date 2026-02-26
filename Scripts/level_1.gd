@@ -15,6 +15,7 @@ func _ready():
 func correct():
 	counter += 1
 	%Counter.text = str(counter) + "/10"
+	%CorrectSound.play()
 	
 	if counter >= 10:
 		get_tree().change_scene_to_file("res://Scenes/victory1.tscn")
@@ -22,6 +23,7 @@ func correct():
 func incorrect():
 	hp -= 1
 	%Hp.value = hp
+	%ErrorSound.play()
 	
 	if hp <= 0:
 		get_tree().change_scene_to_file("res://Scenes/game_over1.tscn")

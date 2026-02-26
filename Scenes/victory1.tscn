@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://cqhqkxrmvtik1"]
+[gd_scene load_steps=3 format=3 uid="uid://cqhqkxrmvtik1"]
 
 [ext_resource type="Script" uid="uid://jnxd5vimfvfs" path="res://Scripts/victory1.gd" id="1_aavvn"]
+[ext_resource type="AudioStream" uid="uid://qddv7jvqxv38" path="res://Assets/sound/01_start2.wav" id="2_m3osh"]
 
 [node name="Victory" type="Control"]
 layout_mode = 3
@@ -60,6 +61,11 @@ offset_top = -289.0
 offset_right = 59.735962
 offset_bottom = -258.0
 text = "Quit"
+
+[node name="VictorySound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_m3osh")
+volume_db = 10.0
 
 [connection signal="pressed" from="Next" to="." method="_on_play_again_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
