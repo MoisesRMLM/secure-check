@@ -4,11 +4,18 @@ extends Control
 @export var email_list: Array[EmailData]
 
 func _ready():
+	if GameManager.tutorial_shown == false:
+		$StartPanel.show()
+	else:
+		$StartPanel.hide()
 	# Upon loading, we remove the buttons that have already been processed
 	for email_id in GameManager.deleted_emails:
 		if has_node("VBoxContainer/" + email_id):
 			get_node("VBoxContainer/" + email_id).queue_free()
-
+	GameManager.total_emails=email_list.size()
+	update_hearts()
+	
+	
 # --- SIGNALS CONNECTED FROM THE EDITOR ---
 
 func _on_button_pressed():
@@ -34,13 +41,14 @@ func _on_accept_pressed(node_name: String, index: int):
 	if data.is_phishing:
 		# Error: Accepted a phishing email
 		GameManager.lose_life()
+		update_hearts()
 		print("Mistake")
 	else:
 		# Correct: Accepted a legitimate email
 		print("Correct")
 	
 	_remove_from_inbox(node_name)
-
+	GameManager.check_victory_condition()
 
 func _on_decline_pressed(node_name: String, index: int):
 	var data = email_list[index]
@@ -51,9 +59,11 @@ func _on_decline_pressed(node_name: String, index: int):
 	else:
 		# Error: Declined a legitimate email
 		GameManager.lose_life()
+		update_hearts()
 		print("Mistake")
 	
 	_remove_from_inbox(node_name)
+	GameManager.check_victory_condition()
 
 # --- LOGIC FUNCTIONS ---
 
@@ -70,6 +80,18 @@ func _remove_from_inbox(node_name: String):
 	if has_node("VBoxContainer/" + node_name):
 		get_node("VBoxContainer/" + node_name).queue_free()
 
+# --- LIVES ---
+func update_hearts():
+	if has_node("Header/Heart1"):
+		$Header/Heart1.visible = GameManager.lives >= 1	
+		$Header/Heart2.visible = GameManager.lives >= 2
+		$Header/Heart3.visible = GameManager.lives >= 3
+
+# --- Start  ---
+func _on_start_mission_pressed():
+	$StartPanel.hide()
+	GameManager.tutorial_shown = true
+	print("Game started!")
 
 # --- HELP PANEL BUTTONS ---
 
