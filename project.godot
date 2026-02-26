@@ -19,6 +19,7 @@ config/icon="uid://b2e2vsro5udy0"
 [autoload]
 
 GameManager="*uid://c3qo1wvo6mdv3"
+Bgm="*res://Scenes/bgm.tscn"
 
 [display]
 

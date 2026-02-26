@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyuuvhylgd7gt"]
+
+[ext_resource type="AudioStream" uid="uid://dv5icu7s00164" path="res://Assets/sound/Murasato Shota - Spiral and Heartbeat.mp3" id="1_2kasm"]
+
+[node name="Bgm" type="AudioStreamPlayer"]
+stream = ExtResource("1_2kasm")
+volume_db = -10.0
+autoplay = true
